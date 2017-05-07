@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C8C711F1EBB01CC002F068F /* Drowning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C711E1EBB01CC002F068F /* Drowning.mp3 */; };
+		5F22AF981EBEBEED007135DB /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F22AF961EBEBEED007135DB /* SpotifyAudioPlayback.framework */; };
+		5F22AF991EBEBEED007135DB /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F22AF971EBEBEED007135DB /* SpotifyAuthentication.framework */; };
 		D313206C1EBAB4F30057C3E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313206B1EBAB4F30057C3E7 /* AppDelegate.swift */; };
 		D313206E1EBAB4F30057C3E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313206D1EBAB4F30057C3E7 /* ViewController.swift */; };
 		D31320711EBAB4F30057C3E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D313206F1EBAB4F30057C3E7 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0C8C711E1EBB01CC002F068F /* Drowning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drowning.mp3; sourceTree = "<group>"; };
+		5F22AF961EBEBEED007135DB /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		5F22AF971EBEBEED007135DB /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		D31320681EBAB4F30057C3E7 /* FiftyFifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiftyFifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D313206B1EBAB4F30057C3E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D313206D1EBAB4F30057C3E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F22AF981EBEBEED007135DB /* SpotifyAudioPlayback.framework in Frameworks */,
+				5F22AF991EBEBEED007135DB /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F22AF9A1EBEBEF2007135DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F22AF961EBEBEED007135DB /* SpotifyAudioPlayback.framework */,
+				5F22AF971EBEBEED007135DB /* SpotifyAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D313205F1EBAB4F20057C3E7 = {
 			isa = PBXGroup;
 			children = (
+				5F22AF9A1EBEBEF2007135DB /* Frameworks */,
 				D313206A1EBAB4F30057C3E7 /* FiftyFifty */,
 				D313207F1EBAB4F40057C3E7 /* FiftyFiftyTests */,
 				D313208A1EBAB4F40057C3E7 /* FiftyFiftyUITests */,
@@ -424,6 +440,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = H83A97BVRD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FiftyFifty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedebs.FiftyFifty;
@@ -439,6 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = H83A97BVRD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FiftyFifty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedebs.FiftyFifty;
