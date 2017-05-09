@@ -65,7 +65,10 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func fetchRequest(_ sender: Any) {
+        let con = Connection()
+        con.test()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

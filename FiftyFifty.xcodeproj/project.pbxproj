@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C8C711F1EBB01CC002F068F /* Drowning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C711E1EBB01CC002F068F /* Drowning.mp3 */; };
+		776B66351EC13C9E001E9249 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776B66341EC13C9E001E9249 /* Connection.swift */; };
 		D313206C1EBAB4F30057C3E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313206B1EBAB4F30057C3E7 /* AppDelegate.swift */; };
 		D313206E1EBAB4F30057C3E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313206D1EBAB4F30057C3E7 /* ViewController.swift */; };
 		D31320711EBAB4F30057C3E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D313206F1EBAB4F30057C3E7 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0C8C711E1EBB01CC002F068F /* Drowning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Drowning.mp3; sourceTree = "<group>"; };
+		776B66341EC13C9E001E9249 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		D31320681EBAB4F30057C3E7 /* FiftyFifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiftyFifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D313206B1EBAB4F30057C3E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D313206D1EBAB4F30057C3E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D313206B1EBAB4F30057C3E7 /* AppDelegate.swift */,
+				776B66341EC13C9E001E9249 /* Connection.swift */,
 				D313206D1EBAB4F30057C3E7 /* ViewController.swift */,
 				D3AC62651EBACA2D0034A506 /* SentViewController.swift */,
 				D313206F1EBAB4F30057C3E7 /* Main.storyboard */,
@@ -271,6 +274,7 @@
 				D313206E1EBAB4F30057C3E7 /* ViewController.swift in Sources */,
 				D3AC62661EBACA2D0034A506 /* SentViewController.swift in Sources */,
 				D313206C1EBAB4F30057C3E7 /* AppDelegate.swift in Sources */,
+				776B66351EC13C9E001E9249 /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
