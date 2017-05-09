@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4A8920C8338511202E6FBC39D8DDFD82E69ABF63",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A7CCE10E00C6CB686F9931DCCC2C4723E334FFA5" : 0,
+    "4A8920C8338511202E6FBC39D8DDFD82E69ABF63" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "09031852-E790-4874-866E-AF09BDB04CC0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A7CCE10E00C6CB686F9931DCCC2C4723E334FFA5" : "..",
+    "4A8920C8338511202E6FBC39D8DDFD82E69ABF63" : "Interlewd\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FiftyFifty",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FiftyFifty.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/juanm95\/Interlewd.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4A8920C8338511202E6FBC39D8DDFD82E69ABF63"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/juanm95\/FiftyFifty.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A7CCE10E00C6CB686F9931DCCC2C4723E334FFA5"
+    }
+  ]
+}

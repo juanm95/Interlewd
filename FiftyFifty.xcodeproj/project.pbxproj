@@ -60,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F22AF981EBEBEED007135DB /* SpotifyAudioPlayback.framework in Frameworks */,
+				5F22AF991EBEBEED007135DB /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F22AF9A1EBEBEF2007135DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F22AF961EBEBEED007135DB /* SpotifyAudioPlayback.framework */,
+				5F22AF971EBEBEED007135DB /* SpotifyAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D313205F1EBAB4F20057C3E7 = {
 			isa = PBXGroup;
 			children = (
+				5F22AF9A1EBEBEF2007135DB /* Frameworks */,
 				D313206A1EBAB4F30057C3E7 /* FiftyFifty */,
 				D313207F1EBAB4F40057C3E7 /* FiftyFiftyTests */,
 				D313208A1EBAB4F40057C3E7 /* FiftyFiftyUITests */,
@@ -428,6 +440,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = H83A97BVRD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FiftyFifty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedebs.FiftyFifty;
@@ -443,6 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = H83A97BVRD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FiftyFifty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.carolinedebs.FiftyFifty;
