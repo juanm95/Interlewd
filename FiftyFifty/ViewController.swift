@@ -8,7 +8,28 @@
 import AVFoundation
 import UIKit
 //Kek
-class ViewController: UIViewController {
+class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate {
+    
+    
+    var auth = SPTAuth.defaultInstance()!
+    var session:SPTSession!
+    var spotifyPlayer: SPTAudioStreamingController?
+    var loginUrl: URL?
+    
+    func setup() {
+        SPTAuth.defaultInstance().clientID = "9f0cac5d230c4877a2a769febe804681"
+        SPTAuth.defaultInstance().redirectURL = URL(string: "soundwich://callback")
+        SPTAuth.defaultInstance().requestedScopes = [SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope]
+        loginUrl = SPTAuth.defaultInstance().spotifyWebAuthenticationURL()
+    }
+    
+    @IBAction func loginBtnPressed(_ sender: UIButton) {
+        if UIApplication.shared.openURL(loginUrl!) {
+            if auth.canHandle(auth.redirectURL) {
+                // To do - build in error handling
+            }
+        }
+    }
     
     var songPlaying = ""
 
@@ -46,7 +67,40 @@ class ViewController: UIViewController {
         pause.isHidden = false
         play.isHidden = true
         nowPlaying.text = ""
+        
+        setup()
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.updateAfterFirstLogin), name: nil, object: nil)
     }
+    
+    func updateAfterFirstLogin () {
+        if let sessionObj:AnyObject = UserDefaults.standard.object(forKey: "SpotifySession") as AnyObject? {
+            let sessionDataObj = sessionObj as! Data
+            let firstTimeSession = NSKeyedUnarchiver.unarchiveObject(with: sessionDataObj) as! SPTSession
+            self.session = firstTimeSession
+            initializePlayer(authSession: session)
+        }
+    }
+    
+    func initializePlayer(authSession:SPTSession){
+        if self.spotifyPlayer == nil {
+            self.spotifyPlayer = SPTAudioStreamingController.sharedInstance()
+            self.spotifyPlayer!.playbackDelegate = self
+            self.spotifyPlayer!.delegate = self
+            try! spotifyPlayer!.start(withClientId: auth.clientID)
+            self.spotifyPlayer!.login(withAccessToken: authSession.accessToken)
+        }
+    }
+    
+    func audioStreamingDidLogin(_ audioStreaming: SPTAudioStreamingController!) {
+        // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
+        print("logged in")
+        self.spotifyPlayer?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+            if (error != nil) {
+                print("playing!")
+            }
+        })
+    }
+    
     @IBOutlet weak var nowPlaying: UILabel!
     
     @IBAction func gotMail(_ sender: Any) {
@@ -65,7 +119,10 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func fetchRequest(_ sender: Any) {
+        let con = Connection()
+        con.test()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
