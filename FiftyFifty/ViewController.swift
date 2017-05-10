@@ -95,8 +95,9 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
         // after a user authenticates a session, the SPTAudioStreamingController is then initialized and this method called
         print("logged in")
         self.spotifyPlayer?.playSpotifyURI("spotify:track:58s6EuEYJdlb0kO7awm3Vp", startingWith: 0, startingWithPosition: 0, callback: { (error) in
+            print("playing!")
             if (error != nil) {
-                print("playing!")
+                
             }
         })
     }
@@ -122,6 +123,14 @@ class ViewController: UIViewController, SPTAudioStreamingDelegate, SPTAudioStrea
     @IBAction func fetchRequest(_ sender: Any) {
         let con = Connection()
         con.test()
+    }
+    
+    @IBAction func stop(_ sender: Any) {
+    do {
+    try self.spotifyPlayer?.stop()
+    } catch {
+    print("couldn't stop")
+    }
     }
 
     override func didReceiveMemoryWarning() {
